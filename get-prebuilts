@@ -6,7 +6,3 @@ mkdir -p $BASEDIR/proprietary
 # Get Android Terminal Emulator (we use a prebuilt so it can update from the Market)
 curl -L -o $BASEDIR/proprietary/Term.apk -O -L http://jackpal.github.com/Android-Terminal-Emulator/downloads/Term.apk
 unzip -o -d $BASEDIR/proprietary $BASEDIR/proprietary/Term.apk lib/*
-
-unzip -o -d $BASEDIR/proprietary $BASEDIR/prebuilt/common/app/LatinImeGoogle.apk lib/*
-
-unzip -o -d $BASEDIR/proprietary $BASEDIR/prebuilt/common/app/GoogleSearch.apk lib/*
