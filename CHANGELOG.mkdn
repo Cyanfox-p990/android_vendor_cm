@@ -2,12 +2,3 @@ CyanFox
 ===============
 
 Visit http://github.com/CyanFox for full changelogs and git access.
-
-CHANGELOG
----------
-
-### 2.0.1
-* Beta #2
-
-### 2.0.0
-* Initial version
