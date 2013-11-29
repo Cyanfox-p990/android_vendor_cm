@@ -14,10 +14,3 @@ To initialize your local repository using the CyanFox trees, use a command like 
 Then to sync up:
 
     repo sync
-
-Buildbot
---------
-
-All supported devices are built nightly and periodically as changes are committed to ensure the source trees remain buildable.
-
-You can view the current build statuses in the [Jenkins](http://jenkins.cyanogenmod.org) tool.
