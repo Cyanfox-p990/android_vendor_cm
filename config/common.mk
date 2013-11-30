@@ -207,6 +207,11 @@ PRODUCT_PACKAGES += \
     Superuser \
     su
 
+# Screen Recorder
+PRODUCT_PACKAGES += \
+    ScreenRecorder \
+    libscreenrecorder
+
 # CyanFox Gapps
 include vendor/cm/config/gapps.mk
 
