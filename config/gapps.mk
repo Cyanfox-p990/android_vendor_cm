@@ -1,6 +1,6 @@
 # app
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/app/app/LatinImeGoogle.apk:system/app/LatinImeGoogle.apk \
+    vendor/cm/prebuilt/common/app/app/GoogleLatinIme.apk:system/app/GoogleLatinIme.apk \
     vendor/cm/prebuilt/common/app/app/GoogleHome.apk:system/app/GoogleHome.apk \
     vendor/cm/prebuilt/common/app/app/Hangouts.apk:system/app/Hangouts.apk
 
@@ -11,7 +11,7 @@ PRODUCT_COPY_FILES += \
 # lib
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/app/lib/libvideochat_jni.so:system/lib/libvideochat_jni.so \
-    vendor/cm/prebuilt/common/app/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
+    vendor/cm/prebuilt/common/app/lib/libjni_unbundled_latinimegoogle.so:system/lib/libjni_unbundled_latinimegoogle.so \
     vendor/cm/prebuilt/common/app/lib/libgoogle_recognizer_jni_l.so:system/lib/libgoogle_recognizer_jni_l.so \
     vendor/cm/prebuilt/common/app/lib/libvcdecoder_jni.so:system/lib/libvcdecoder_jni.so
 
