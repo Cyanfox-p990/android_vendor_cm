@@ -141,8 +141,7 @@ PRODUCT_PACKAGES += \
     CMFileManager \
     LockClock \
     CMUpdater \
-    CMFota \
-    WhisperPush
+    CMFota
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
