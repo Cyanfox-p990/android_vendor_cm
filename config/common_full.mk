@@ -18,3 +18,7 @@ PRODUCT_PACKAGES += \
     PhaseBeam \
     VisualizationWallpapers \
     PhotoTable
+
+# Extra tools in CM
+PRODUCT_PACKAGES += \
+    vim
