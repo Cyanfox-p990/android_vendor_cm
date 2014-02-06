@@ -6,7 +6,8 @@ PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/gapps/app/CalendarGoogle.apk:system/app/CalendarGoogle.apk \
     vendor/cm/prebuilt/common/gapps/app/Chrome.apk:system/app/Chrome.apk \
     vendor/cm/prebuilt/common/gapps/app/Gmail2.apk:system/app/Gmail2.apk \
-    vendor/cm/prebuilt/common/gapps/app/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk
+    vendor/cm/prebuilt/common/gapps/app/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
+    vendor/cm/prebuilt/common/gapps/app/SlidingExplorer.apk:system/app/SlidingExplorer.apk
 
 # priv-app
 PRODUCT_COPY_FILES += \
