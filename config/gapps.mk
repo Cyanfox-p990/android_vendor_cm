@@ -7,7 +7,8 @@ PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/gapps/app/Chrome.apk:system/app/Chrome.apk \
     vendor/cm/prebuilt/common/gapps/app/Gmail2.apk:system/app/Gmail2.apk \
     vendor/cm/prebuilt/common/gapps/app/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
-    vendor/cm/prebuilt/common/gapps/app/SlidingExplorer.apk:system/app/SlidingExplorer.apk
+    vendor/cm/prebuilt/common/gapps/app/SlidingExplorer.apk:system/app/SlidingExplorer.apk \
+    vendor/cm/prebuilt/common/gapps/app/ChromeBookmarksSyncAdapter.apk:system/app/ChromeBookmarksSyncAdapter.apk
 
 # priv-app
 PRODUCT_COPY_FILES += \
@@ -21,8 +22,7 @@ PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/gapps/priv-app/GooglePartnerSetup.apk:system/priv-app/GooglePartnerSetup.apk \
     vendor/cm/prebuilt/common/gapps/priv-app/GoogleServicesFramework.apk:system/priv-app/GoogleServicesFramework.apk \
     vendor/cm/prebuilt/common/gapps/priv-app/Phonesky.apk:system/priv-app/Phonesky.apk \
-    vendor/cm/prebuilt/common/gapps/priv-app/SetupWizard.apk:system/priv-app/SetupWizard.apk \
-    vendor/cm/prebuilt/common/gapps/priv-app/ConfigUpdater.apk:system/priv-app/ConfigUpdater.apk
+    vendor/cm/prebuilt/common/gapps/priv-app/SetupWizard.apk:system/priv-app/SetupWizard.apk
 
 # lib
 PRODUCT_COPY_FILES += \
