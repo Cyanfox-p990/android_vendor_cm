@@ -87,6 +87,10 @@ PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 endif
 
+# Signature compatibility validation
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/bin/otasigcheck.sh:system/bin/otasigcheck.sh
+
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
@@ -95,10 +99,6 @@ PRODUCT_COPY_FILES += \
 # userinit support
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
-
-# SELinux filesystem labels
-PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
 
 # CM-specific init file
 PRODUCT_COPY_FILES += \
@@ -187,6 +187,13 @@ PRODUCT_PACKAGES += \
 # rsync
 PRODUCT_PACKAGES += \
     rsync
+
+# Stagefright FFMPEG plugin
+PRODUCT_PACKAGES += \
+    libstagefright_soft_ffmpegadec \
+    libstagefright_soft_ffmpegvdec \
+    libFFmpegExtractor \
+    libnamparser
 
 # These packages are excluded from user builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
@@ -295,6 +302,7 @@ endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.version=$(CM_VERSION) \
+  ro.cm.releasetype=$(CM_BUILDTYPE) \
   ro.modversion=$(CM_VERSION) \
   ro.cf.version=$(CF_VERSION) \
   ro.cmlegal.url=http://www.cyanogenmod.org/docs/privacy
@@ -322,8 +330,17 @@ ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
 endif
 endif
 
+# by default, do not update the recovery with system updates
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
+
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.display.version=$(CM_DISPLAY_VERSION)
+
+# disable multithreaded dextop for RELEASE and SNAPSHOT builds
+ifneq ($(filter RELEASE SNAPSHOT,$(CM_BUILDTYPE)),)
+PRODUCT_PROPERTY_OVERRIDES += \
+  persist.sys.dalvik.multithread=false
+endif
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 
